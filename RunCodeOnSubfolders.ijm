@@ -3,6 +3,7 @@ MacroName = "CenClusterQuant.ijm";
 printDIRname = 1;		// set to 0 or 1 depending on whether you want directory name printed to log
 printIMname = 0;		// set to 0 or 1 depending on whether you want image name printed to log
 
+
 run ("Close All");	print ("\\Clear");
 dir = getDirectory ("Choose a Directory");
 print(MacroName, "==>" , dir);
@@ -28,8 +29,9 @@ print ("All done");
 
 function RunCode(IM){
 	if (printIMname == 1)	print(IM);
-	runMacro(MacroPath + File.separator + MacroName);
-
-	waitForUser(IM);
+	fullMacroFileLocation = MacroPath + File.separator + MacroName;
+	runMacro(fullMacroFileLocation);
+	
+	//waitForUser(IM);
 	
 }
