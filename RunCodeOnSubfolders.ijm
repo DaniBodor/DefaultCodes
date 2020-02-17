@@ -25,7 +25,8 @@ for (d = 0; d < subdirs.length; d++) {
 					open ( filename );
 					ori = getTitle ();
 					RunCode (ori);
-					run ("Close All"); 	run("Collect Garbage");
+					run ("Close All"); 	
+					for (i = 0; i < 3; i++) run("Collect Garbage");
 				}
 			}
 		}
